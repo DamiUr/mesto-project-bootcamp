@@ -1,0 +1,26 @@
+.profile__edit-button {
+
+    background-color: transparent;
+    background-image: url(../../../image/pencil.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 24px;
+    margin-left: 18px;
+    margin-top: 15px;
+    width: 24px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        top: 150px;
+        left: 245px;
+        background-size: 7.5px;
+    }
+}

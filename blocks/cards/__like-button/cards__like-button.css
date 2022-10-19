@@ -1,0 +1,14 @@
+.cards__like-button {
+    margin-right: 20px;
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-image: url(../../../image/heart.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    border-style: none;
+}
