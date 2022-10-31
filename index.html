@@ -10,23 +10,25 @@
 
 <body class="page">
     <header class="header">
-        <img class="header__logo" src="image/Mesto-logo.png" alt="logo place">
+        <img class="header__logo" src="image/Mesto-logo.svg" alt="логотип Место">
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="image/avatar.jpg" alt="avatar">
+            <img class="profile__avatar" src="image/kusto.png" alt="Фото Жак-Ив Кусто">
             <div class="profile__info">
-                <h1 class="profile__name">Arsenal</h1>
-                <p class="profile__description">London Football Club</p>
-                <button class="profile__edit-button"></button>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__description">Исследователь океана</p>
+                <button class="profile__edit-button" type="button"></button>
                 <div class="popup" id="edit">
-                    <form class="popup__container">
+                    <div class="popup__container">
                         <h2 class="popup__title">Редактировать профиль</h2>
-                        <input type="text" name="name" id="name" class="popup__row">
-                        <input type="text" name="work" id="work" class="popup__row">
-                        <input type="submit" class="popup__submit" value="Сохранить">
-                        <button class="popup__close"></button>
-                    </form>
+                        <form class="popup__form" name="edit-form">
+                            <input type="text" name="name" id="name" class="popup__row" value="Жак-Ив Кусто">
+                            <input type="text" name="work" id="work" class="popup__row" value="Исследователь океана">
+                            <input type="submit" class="popup__submit" value="Сохранить">
+                        </form>
+                        <button class="popup__close" type="button" aria-label="закрыть"></button>
+                    </div>
                 </div>
             </div>
             <button class="profile__add-button"></button>

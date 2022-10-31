@@ -5,10 +5,16 @@
     height: 19px;
     box-sizing: border-box;
     background-color: #fff;
-    background-image: url(../../../image/heart.png);
+    background-image: url(../../../image/heart.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    cursor: pointer;
     border-style: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.cards__like-button:hover {
+    opacity: 0.6;
 }
