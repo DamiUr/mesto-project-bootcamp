@@ -19,7 +19,7 @@
                 <h1 class="profile__name">Arsenal</h1>
                 <p class="profile__description">London Football Club</p>
                 <button class="profile__edit-button"></button>
-                <div class="popup popup_opened">
+                <div class="popup" id="edit">
                     <form class="popup__container">
                         <h2 class="popup__title">Редактировать профиль</h2>
                         <input type="text" name="name" id="name" class="popup__row">
@@ -32,56 +32,25 @@
             <button class="profile__add-button"></button>
         </section>
         <section class="elements">
-            <div class="cards">
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/arsenal-1929-30jpg.jpg" alt="History photo">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">History</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/HighburyStadium.jpg" alt="Highbury Stadium">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">Old stadium</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/LegendAnri.jpg" alt="Anri">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">Legend</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/youngteam.jpg" alt="Team photo">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">Young team</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/Stadium.jpg" alt="Emirates Stadium">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">New stadium</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-                <div class="cards__element">
-                    <img class="cards__photo" src="image/fans.jpg" alt="Fans photo">
-                    <div class="cards__photo-sign">
-                        <h2 class="cards__photo-title">Fans</h2>
-                        <button class="cards__like-button"></button>
-                    </div>
-                </div>
-            </div>
+            <div class="cards"></div>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <script></script>
+
+    <!--шаблон карточек-->
+    <template id="card-template">
+        <div class="cards__element">
+            <img class="cards__photo" src=" " alt=" ">
+            <div class="cards__photo-sign">
+                <h2 class="cards__photo-title"></h2>
+                <button class="cards__like-button" type="button" aria-label="лайк"></button>
+            </div>
+        </div>
+    </template>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
