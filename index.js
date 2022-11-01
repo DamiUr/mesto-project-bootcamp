@@ -33,6 +33,8 @@ function cloneItem(item) {
   const newItem = template.cloneNode(true);
   const photo = newItem.querySelector('.cards__photo');
   const text = newItem.querySelector('.cards__photo-title');
+  const likeButton = newItem.querySelector('.cards__like-button');
+  const deleteButton = newItem.querySelector('.cards__delete-button');
   photo.src = item.link;
   photo.alt = item.name;
   text.textContent = item.name;
