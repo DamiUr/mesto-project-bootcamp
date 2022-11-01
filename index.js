@@ -38,6 +38,8 @@ function cloneItem(item) {
   photo.src = item.link;
   photo.alt = item.name;
   text.textContent = item.name;
+  likeButton.addEventListener('click', pressLikeButton);
+  deleteButton.addEventListener('click', pressDeleteButton);
   return newItem;
 }
 
@@ -50,3 +52,10 @@ function renderItem(item) {
 initialCards.forEach((item) => {
   renderItem(item);
 });
+
+function pressLikeButton(evt) {
+  evt.target.classList.toggle('cards__like-button_active');
+}
+function pressDeleteButton(evt) {
+  evt.target.closest('.cards__element').remove();
+}
