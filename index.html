@@ -9,34 +9,68 @@
 </head>
 
 <body class="page">
+
+    <!--header-->
     <header class="header">
         <img class="header__logo" src="image/Mesto-logo.svg" alt="логотип Место">
     </header>
     <main class="content">
+
+        <!--profile-->
         <section class="profile">
             <img class="profile__avatar" src="image/kusto.png" alt="Фото Жак-Ив Кусто">
             <div class="profile__info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <p class="profile__description">Исследователь океана</p>
                 <button class="profile__edit-button" type="button"></button>
-                <div class="popup" id="edit">
-                    <div class="popup__container">
-                        <h2 class="popup__title">Редактировать профиль</h2>
-                        <form class="popup__form" name="edit-form">
-                            <input type="text" name="name" id="name" class="popup__row" value="Жак-Ив Кусто">
-                            <input type="text" name="work" id="work" class="popup__row" value="Исследователь океана">
-                            <input type="submit" class="popup__submit" value="Сохранить">
-                        </form>
-                        <button class="popup__close" type="button" aria-label="закрыть"></button>
-                    </div>
-                </div>
             </div>
             <button class="profile__add-button"></button>
         </section>
+
+        <!--popup edit (редактировать)-->
+        <div class="popup" id="edit">
+            <div class="popup__container">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form class="popup__form" name="edit-form">
+                    <input type="text" name="name" id="name" class="popup__row" value="Жак-Ив Кусто">
+                    <input type="text" name="work" id="work" class="popup__row" value="Исследователь океана">
+                    <input type="submit" class="popup__submit" value="Сохранить">
+                </form>
+                <button class="popup__close" type="button" aria-label="закрыть"></button>
+            </div>
+        </div>
+
+        <!--popup add (добавить)-->
+        <div class="popup " id="add">
+            <div class="popup__container">
+                <h2 class="popup__title">Новое место</h2>
+                <form class="popup__form" name="edit-form">
+                    <input type="text" name="place" id="place" class="popup__row" placeholder="Название">
+                    <input type="url" name="url" id="url" class="popup__row" placeholder="Ссылка на картинку">
+                    <input type="submit" class="popup__submit" value="Создать">
+                </form>
+                <button class="popup__close" type="button" aria-label="закрыть"></button>
+            </div>
+        </div>
+
+        <!--popup открыть фото-->
+        <div class="popup popup_type_photo">
+            <div class="popup__photo-container">
+                <figure class="popup__figure">
+                    <img class="popup__photo" src="." alt="">
+                    <figcaption class="popup__photo-caption"></figcaption>
+                </figure>
+                <button class="popup__close" type="button" aria-label="закрыть"></button>
+            </div>
+        </div>
+
+        <!--elements-->
         <section class="elements">
             <div class="cards"></div>
         </section>
     </main>
+
+    <!--подвал-->
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
@@ -53,6 +87,7 @@
         </div>
     </template>
 
+    <!--script-->
     <script src="./index.js"></script>
 </body>
 
