@@ -42,7 +42,7 @@ const popupPhoto = document.querySelector('.popup_type_photo');
 const bigPhoto = popupPhoto.querySelector('.popup__photo');
 const bigPhotoCaption = popupPhoto.querySelector('.popup__photo-caption');
 const template = document.querySelector('#card-template').content;
-const cards = document.querySelector('.cards');
+const cardsContainer = document.querySelector('.cards');
 
 
 /** пишем функцию создания карточки cloneItem, клонирование карточки, вставка данных и return получившегося DOM элемента карточки **/
@@ -82,7 +82,7 @@ function openPopupPhoto(evt) {
 /** код который из массива карточек, создает и добавляет карточки на страницу*/
 initialCards.forEach((card) => {
   const newItem = createCard(card);
-  cards.appendChild(newItem);
+  cardsContainer.appendChild(newItem);
 });
 
 
@@ -94,8 +94,8 @@ function closePopup(popup) {
 
 /*кнопка esc закрытие пересмотреть исправление*/
 function handleEscape(evt) {
-  const openedPopup = document.querySelector('.popup_opened');
   if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
     closePopup(openedPopup);
   }
 }
@@ -138,10 +138,12 @@ function handleFormEditSubmit(evt) {
 
 function handleFormAddSubmit(evt) {
   evt.preventDefault();
-  cards.prepend(
+  cardsContainer.prepend(
     createCard({ name: placeInput.value, link: urlInput.value })
   );
   closePopup(popupAdd);
+  placeInput.value = "";
+  urlInput.value = "";
 }
 
 
