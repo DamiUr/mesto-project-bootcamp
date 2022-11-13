@@ -151,6 +151,15 @@ formEdit.addEventListener('submit', handleFormEditSubmit);
 formAdd.addEventListener('submit', handleFormAddSubmit);
 
 
+popups.forEach(function(popup) {
+  popup.addEventListener('click', function(evt) {
+    if (evt.currentTarget === evt.target) {
+      closePopup(evt.target);
+    }
+  });
+});
+
+
 
 
 
