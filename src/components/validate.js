@@ -1,11 +1,4 @@
-const settings = {
-    formSelector: 'popup__form',
-    inputSelector: 'popup__row',
-    submitButtonSelector: 'popup__submit',
-    inactiveButtonClass: 'popup__submit_disabled',
-    inputErrorClass: 'popup__row_type_error',
-    errorClass: 'popup__form-input-error_active'
-};
+import { settings } from "../index.js";
 
 const showInputError = (formElement, inputElement, errorMessage, obj) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
