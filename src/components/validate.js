@@ -1,5 +1,3 @@
-import { settings } from "../index.js";
-
 const showInputError = (formElement, inputElement, errorMessage, obj) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(`${obj.inputErrorClass}`);
@@ -50,7 +48,7 @@ const setEventListeners = (formElement, obj) => {
     });
 };
 
-const enableValidation = (obj) => {
+export const enableValidation = (obj) => {
     const formList = Array.from(document.querySelectorAll(`.${obj.formSelector}`));
     formList.forEach((formElement) => {
         formElement.addEventListener('submit', function (evt) {
@@ -60,4 +58,3 @@ const enableValidation = (obj) => {
     });
 };
 
-enableValidation(settings);

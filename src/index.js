@@ -2,7 +2,8 @@ import "./pages/index.css";
 
 import { initialCards } from "./components/array.js";
 import { closePopup, openPopup } from "./components/utils.js";
-import { createCard, handleFormAddSubmit} from "./components/cards.js";
+import { createCard } from "./components/cards.js";
+import { enableValidation} from "./components/validate"
 
 
 const cardsContainer = document.querySelector('.cards');
@@ -61,6 +62,15 @@ function handleFormEditSubmit(evt) {
   closePopup(popupEdit);
 }
 
+ function handleFormAddSubmit(evt) {
+  evt.preventDefault();
+  cardsContainer.prepend(
+      createCard({ name: placeInput.value, link: urlInput.value })
+  );
+  closePopup(popupAdd);
+  evt.target.reset();
+}
+
 
 
 /** Обработчик редактирования профиля*/
@@ -77,6 +87,8 @@ export const settings = {
   inputErrorClass: 'popup__row_type_error',
   errorClass: 'popup__form-input-error_active'
 };
+
+enableValidation(settings);
 
 
 

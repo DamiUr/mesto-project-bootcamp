@@ -34,16 +34,6 @@ function pressLikeButton(evt) {
 }
 
 
-/** добавляем новую карточку **/
-export function handleFormAddSubmit(evt) {
-    evt.preventDefault();
-    cardsContainer.prepend(
-        createCard({ name: placeInput.value, link: urlInput.value })
-    );
-    closePopup(popupAdd);
-    evt.target.reset();
-}
-
 
 /** создаем функцию удаления **/
 function pressDeleteButton(evt) {
