@@ -12,7 +12,6 @@ export function handleEscape(evt) {
 export function handleOutside(event) {
   const isClickInside = !!event.target.closest('.popup__container');
   if (!isClickInside) {
-    const openedPopup = document.querySelector('.popup_opened')
     closePopup(openedPopup);
   };
 };
